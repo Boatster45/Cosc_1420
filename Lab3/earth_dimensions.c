@@ -10,13 +10,13 @@ int main()
     scanf("%lf", &PolR);
  
     // Calculate the Circumference using Polar Radius inputted by user using PolarRadius * PI * 2
-    C = PolR * PI * 2.00000;
+    C = PolR * PI * 2.000000;
 
     // Calculate the Surface Area using Polar Radius inputted by user using (PolarRadius *) * (PolarRadius^2)
-    SA = (4.0000 * PI) * (PolR * PolR);
+    SA = (4.00000 * PI) * (PolR * PolR);
 
     // Calculate the Surface Area using Polar Radius inputted by user using ((4.0/3.0) * PI) * (PolarRadius^3)
-    V = ((4.0000/3.0000) * PI) * (PolR * PolR * PolR);
+    V = ((4.00000/3.00000) * PI) * (PolR * PolR * PolR);
 
     // Print Name and all other data points using decimal precision of 0.5 and the calcluations from above
     printf("Johnathan");
@@ -25,10 +25,10 @@ int main()
     printf("\n1420");
     printf("\nN01");
     printf("\nThe Blue Marble");
-    printf("\nThe Radius is: %.4lf", PolR);
-    printf("\nThe Circumference is: %.4lf", C);
-    printf("\nThe Surface Area is: %.4lf", SA);
-    printf("\nThe Volume is: %.4lf", V);
+    printf("\n%.5lf", PolR);
+    printf("\n%.5lf", C);
+    printf("\n%.5lf", SA);
+    printf("\n%.5lf", V);
     printf("\nFurey, Edward \"Circle Calculator\" at https://www.calculatorsoup.com/calculators/geometry-plane/circle.php from CalculatorSoup, https://www.calculatorsoup.com - Online Calculators");
     printf("\nFurey, Edward \"Sphere Calculator\" at https://www.calculatorsoup.com/calculators/geometry-solids/sphere.php from CalculatorSoup, https://www.calculatorsoup.com - Online Calculators");
     return 0;
