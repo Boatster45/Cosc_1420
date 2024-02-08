@@ -15,7 +15,7 @@ int main()
     // Calculate the Surface Area using Polar Radius inputted by user using (PolarRadius *) * (PolarRadius^2)
     SA = (4.00000 * PI) * (PolR * PolR);
 
-    // Calculate the Surface Area using Polar Radius inputted by user using ((4.0/3.0) * PI) * (PolarRadius^3)
+    // Calculate the Volume using Polar Radius inputted by user using ((4.0/3.0) * PI) * (PolarRadius^3)
     V = ((4.00000/3.00000) * PI) * (PolR * PolR * PolR);
 
     // Print Name and all other data points using decimal precision of 0.5 and the calcluations from above
