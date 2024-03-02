@@ -33,10 +33,9 @@ double readData(char *str, FILE *file)
     // Set for fixed decimal, four (4) decimal places
     // **** INSERT CODE HERE ****
     printf("%.4lf", value);
-
+    
     return value;
 }
-
 // Function 'inputline': read a line into 'str', return length
 // Note: Value of string 'str' will be passed to 'monument' variable
 // Note: Remove newline ('\n') from file input stream
@@ -49,21 +48,16 @@ void readName(char *str, int SIZE, FILE *file)
     // 2. Input string value (may be multiple words)
     // **** INSERT CODE HERE ****
     fgets(str, SIZE, file);
-    size_t len = strlen(str);
-    if (len > 0 && (str[len - 1] == '\n' || str[len - 1] == '\r')) {
-        str[len - 1] = '\0';
-    }
-    // Output inputted string value
-    printf("%s\n", str);
+    fgets(str, SIZE, file);
+    printf("%s", str);
+    
 }
-
 // converts the distance to inches
 // 1 m = 39.3700787 in
 double total_in_inches(double size_in_meters)
 {
-    double total_in_inches = 39.3700787 * size_in_meters;
     // **** INSERT CODE HERE ****
-
+    double total_in_inches = 39.3700787 * size_in_meters;
     return total_in_inches;
 }
 
@@ -71,9 +65,8 @@ double total_in_inches(double size_in_meters)
 // 'scale': factor for reducing 'size'
 double scale_inches(double size, double scale)
 {
-    double scaled_size = size / scale;
     // **** INSERT CODE HERE ****
-
+    double scaled_size = size / scale;
     return scaled_size;
 }
 
@@ -81,18 +74,15 @@ double scale_inches(double size, double scale)
 // use: 2.54 centimeters per inch for conversion factor
 int find_feet(double inches)
 {
-    double feet = inches / 12;
-
     // **** INSERT CODE HERE ****
-
+    double feet = inches / 12;
     return feet;
 }
 
 // find extra number of inches after number of feet deducted
 double find_inches(double inches)
 {
-    double remaining_inches = inches - (find_feet(inches) * 12);
     // **** INSERT CODE HERE ****
-    
+    double remaining_inches = inches - (find_feet(inches) * 12);
     return remaining_inches;
 }
