@@ -15,8 +15,8 @@ COSC 1420 Section N01
 
 void read_colors(const char *fileName, char *colors_string, int SIZE) {
     FILE *file = fopen(fileName, "r"); // Open file
-    colors_string[0] = '\0'; // Initialize colors string
     char color[100]; //char buffer array
+    colors_string[0] = '\0'; // Initialize colors string
     //while loop to read each line, strconcatenate the color, and add space to the end of each
     while (fscanf(file, "%s", color) != EOF) {
         strcat(colors_string, color);
@@ -47,11 +47,12 @@ double calc_volume(double radius, double height) {
     return M_PI * radius * radius * height;
 }
 
+//Failed due to not understanding the best way to ignore the "hole"
 double calc_toh_disk_surface_area(double radius, double height) {
     return (2 * M_PI * radius) * (radius + height);
-    
 }
 
+//Failed due to not understanding the best way to ignore the "hole"
 double calc_toh_disk_volume(double radius, double height) {
     return M_PI * radius * radius * height;
 }
