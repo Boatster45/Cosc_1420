@@ -1,0 +1,36 @@
+echo "Welcome to the User-AD Migrationo Tool"
+while ($true) {
+$oldComputerSerial = Read-Host "Enter the serial number of the old computer (MXLxxxxxx)"
+
+$oldComputer = Get-ADComputer -Filter "Name -eq '$oldComputerSerial'"
+
+if ($oldComputer) {
+    $newComputerSerial = Read-Host "Enter the serial number of the newly imaged computer (MXLxxxxxx)"
+
+    $sourceOU = ($oldComputer.DistinguishedName -split ',', 2)[1]
+
+    $newComputer = Get-ADComputer -Filter "Name -eq '$newComputerSerial'" -SearchBase "OU=Newly-ImagedPCs,$sourceOU"
+
+    if ($newComputer) {
+        $groupMembership = $oldComputer.MemberOf
+        $description = $oldComputer.Description -split '\$' | Select-Object -First 1
+        $location = $oldComputer.DistinguishedName
+
+        # Add the copied group membership to the new computer object
+        foreach ($group in $groupMembership) {
+            Add-ADGroupMember -Identity $group -Members $newComputer
+        }
+
+        Set-ADComputer -Identity $newComputer -Description $description
+        Move-ADObject -Identity $newComputer -TargetPath $location
+
+        Write-Host "Computer object properties updated successfully."
+    } else {
+        Write-Host "Newly imaged computer not found in the Newly-ImagedPCs location."
+    }
+} 
+else {
+    Write-Host "Old computer not found."
+    break
+}
+}

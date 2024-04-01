@@ -37,7 +37,7 @@ double calc_circumference(double radius) {
     return 2 * M_PI * radius;
 }
 
-////Caclulate Total Surface Area of the Cylinder(s)
+//Caclulate Total Surface Area of the Cylinder(s)
 double calc_total_surface_area(double radius, double height) {
     return (2 * M_PI * radius) * (radius + height); //Utilizes the formula: total_area = 2 × π × r × (r + h).
 }
