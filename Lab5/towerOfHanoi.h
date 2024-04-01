@@ -24,7 +24,7 @@ void read_colors(const char *fileName, char *colors_string, int SIZE) {
     }
 
     fclose(file); //Close file
-
+}
 // Function to calculate the diameter of a disk
 double calc_diameter(double radius);
 
