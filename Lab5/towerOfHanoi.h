@@ -22,7 +22,6 @@ void read_colors(const char *fileName, char *colors_string, int SIZE) {
         strcat(colors_string, color);
         strcat(colors_string, " ");
     }
-
     fclose(file); //Close file
 
 }
