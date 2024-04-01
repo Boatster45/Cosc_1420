@@ -9,6 +9,7 @@ COSC 1420 Section N01
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+<<<<<<< Updated upstream
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif
@@ -24,8 +25,11 @@ void read_colors(const char *fileName, char *colors_string, int SIZE) {
     }
 
     fclose(file); //Close file
+=======
+#define M_PI 3.14159265358979323846
+#ifndef TOWEROFHANOI_H
+#define TOWEROFHANOI_H
 
-}
 
 //Calculate diameter using given radius
 double calc_diameter(double radius) {
