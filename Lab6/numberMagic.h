@@ -2,7 +2,7 @@
 Johnathan Kissee
 johnathan.kissee84
 Lab6: Number Magic
-04/01/24  
+04/12/24  
 COSC 1420 Section N01
 */
 
